@@ -6,7 +6,7 @@ export const COMPANY_INFO = {
   address: "Gurugram, Haryana, India",
   workingHours: "9:00 AM - 8:00 PM",
   workingDays: "Monday - Sunday",
-  experience: "10+",
+  experience: "10",
   servicesCompleted: "5000+",
   happyCustomers: "4500+",
 };

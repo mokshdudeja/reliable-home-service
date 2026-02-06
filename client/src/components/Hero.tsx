@@ -23,13 +23,13 @@ export function Hero() {
             </div>
 
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Expert Home Appliance{" "}
-              <span className="text-primary">Repair Service</span> in Gurugram
+              Fast & Reliable Home Appliance{" "}
+              <span className="text-primary">Repair Service</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
               Fast, reliable doorstep repair for Washing Machine, Refrigerator, Microwave, Dryer & Dishwasher. 
-              Certified technicians with {COMPANY_INFO.experience}+ years of experience.
+              Certified technicians with {COMPANY_INFO.experience} years of experience.
             </p>
 
             <div className="flex flex-wrap gap-3">
