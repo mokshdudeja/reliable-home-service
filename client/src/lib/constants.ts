@@ -194,18 +194,14 @@ export const FAQ_DATA = [
 ];
 
 export const BRANDS = [
-  "Samsung",
   "LG",
+  "Samsung",
   "Whirlpool",
-  "Godrej",
-  "IFB",
   "Bosch",
+  "IFB",
+  "Haier",
   "Siemens",
   "Panasonic",
-  "Haier",
+  "Godrej",
   "Electrolux",
-  "Faber",
-  "Elica",
-  "Bajaj",
-  "Morphy Richards",
 ];
