@@ -1,5 +1,4 @@
 import { Phone, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export function FloatingCTA() {
@@ -10,24 +9,19 @@ export function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         data-testid="link-floating-whatsapp"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover-elevate active-elevate-2 overflow-visible"
       >
-        <Button
-          size="icon"
-          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg"
-        >
-          <MessageCircle className="w-6 h-6" />
-          <span className="sr-only">WhatsApp</span>
-        </Button>
+        <MessageCircle className="w-6 h-6" />
+        <span className="sr-only">WhatsApp</span>
       </a>
 
-      <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-floating-call">
-        <Button
-          size="icon"
-          className="w-14 h-14 rounded-full shadow-lg"
-        >
-          <Phone className="w-6 h-6" />
-          <span className="sr-only">Call Now</span>
-        </Button>
+      <a
+        href={`tel:${COMPANY_INFO.phone}`}
+        data-testid="link-floating-call"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg hover-elevate active-elevate-2 overflow-visible"
+      >
+        <Phone className="w-6 h-6" />
+        <span className="sr-only">Call Now</span>
       </a>
     </div>
   );

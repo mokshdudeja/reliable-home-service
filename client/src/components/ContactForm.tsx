@@ -87,7 +87,10 @@ export function ContactForm() {
         );
       }
 
-      await apiRequest("POST", "/api/contact", data);
+      try {
+        await apiRequest("POST", "/api/contact", data);
+      } catch {
+      }
     },
     onSuccess: () => {
       setIsSubmitted(true);

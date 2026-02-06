@@ -1,9 +1,23 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [, navigate] = useLocation();
+
+  const scrollToSection = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const isHomePage = window.location.pathname === '/';
+    if (isHomePage) {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
 
   return (
     <footer className="bg-foreground text-background">
@@ -72,58 +86,63 @@ export function Footer() {
             <h3 className="font-heading font-semibold text-lg">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link
+                <a
                   href="/"
                   className="text-background/70 hover:text-background transition-colors text-sm"
                   data-testid="link-footer-home"
                 >
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/#services"
-                  className="text-background/70 hover:text-background transition-colors text-sm"
+                  className="text-background/70 hover:text-background transition-colors text-sm cursor-pointer"
                   data-testid="link-footer-services"
+                  onClick={(e) => scrollToSection(e, 'services')}
                 >
                   Services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/#why-us"
-                  className="text-background/70 hover:text-background transition-colors text-sm"
+                  className="text-background/70 hover:text-background transition-colors text-sm cursor-pointer"
                   data-testid="link-footer-why-us"
+                  onClick={(e) => scrollToSection(e, 'why-us')}
                 >
                   Why Choose Us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/#testimonials"
-                  className="text-background/70 hover:text-background transition-colors text-sm"
+                  className="text-background/70 hover:text-background transition-colors text-sm cursor-pointer"
                   data-testid="link-footer-testimonials"
+                  onClick={(e) => scrollToSection(e, 'testimonials')}
                 >
                   Customer Reviews
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/#faq"
-                  className="text-background/70 hover:text-background transition-colors text-sm"
+                  className="text-background/70 hover:text-background transition-colors text-sm cursor-pointer"
                   data-testid="link-footer-faq"
+                  onClick={(e) => scrollToSection(e, 'faq')}
                 >
                   FAQs
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
+                <a
                   href="/#contact"
-                  className="text-background/70 hover:text-background transition-colors text-sm"
+                  className="text-background/70 hover:text-background transition-colors text-sm cursor-pointer"
                   data-testid="link-footer-contact"
+                  onClick={(e) => scrollToSection(e, 'contact')}
                 >
                   Contact Us
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
