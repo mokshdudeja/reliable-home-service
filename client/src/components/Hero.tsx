@@ -31,8 +31,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-              Fast, reliable doorstep repair for Washing Machine, Refrigerator, Microwave, Dryer & Dishwasher. 
-              Certified technicians with {COMPANY_INFO.experience} years of experience.
+              We specialize in Dryer, Dishwasher, Refrigerator, Washing Machine, and Microwave repairs with expert care. From minor fixes to major issues, we've got you covered!
             </p>
 
             <div className="flex flex-wrap gap-3">
