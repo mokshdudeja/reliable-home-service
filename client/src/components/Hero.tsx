@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Clock, Shield, Wrench } from "lucide-react";
+import { Phone, CalendarCheck, Clock, Shield, Wrench } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export function Hero() {
@@ -36,6 +36,19 @@ export function Hero() {
               <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-hero-call">
                 <Button size="lg" className="gap-2 text-base">
                   <Phone className="h-5 w-5" />
+                  Call Now
+                </Button>
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                data-testid="link-hero-book"
+              >
+                <Button size="lg" variant="outline" className="gap-2 text-base">
+                  <CalendarCheck className="h-5 w-5" />
                   Book an Appointment
                 </Button>
               </a>

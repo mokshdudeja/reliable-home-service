@@ -1,8 +1,8 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone } from "lucide-react";
-import { SERVICES, COMPANY_INFO } from "@/lib/constants";
+import { CalendarCheck } from "lucide-react";
+import { SERVICES } from "@/lib/constants";
 
 export function Services() {
   return (
@@ -56,12 +56,19 @@ export function Services() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0">
-                <a href={`tel:${COMPANY_INFO.phone}`} className="w-full">
+                <a
+                  href="#contact"
+                  className="w-full"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   <Button
                     className="w-full gap-2"
                     data-testid={`button-service-${service.id}`}
                   >
-                    <Phone className="w-4 h-4" />
+                    <CalendarCheck className="w-4 h-4" />
                     Book an Appointment
                   </Button>
                 </a>

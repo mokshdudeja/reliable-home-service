@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Phone, 
+  CalendarCheck,
   CheckCircle, 
   Clock, 
   Shield, 
@@ -91,6 +92,19 @@ export default function ServiceDetail() {
                     <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-service-call">
                       <Button size="lg" className="gap-2 text-base">
                         <Phone className="h-5 w-5" />
+                        Call Now
+                      </Button>
+                    </a>
+                    <a
+                      href="#contact"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      data-testid="link-service-book"
+                    >
+                      <Button size="lg" variant="outline" className="gap-2 text-base">
+                        <CalendarCheck className="h-5 w-5" />
                         Book an Appointment
                       </Button>
                     </a>

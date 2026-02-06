@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, CalendarCheck } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -56,6 +56,25 @@ export function Header() {
               <span className="hidden md:inline">Call Now</span>
             </Button>
           </a>
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const isHomePage = window.location.pathname === '/';
+              if (isHomePage) {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/#contact';
+              }
+            }}
+            className="hidden sm:inline-flex"
+            data-testid="link-book-header"
+          >
+            <Button variant="outline" size="sm" className="gap-2">
+              <CalendarCheck className="h-4 w-4" />
+              <span className="hidden md:inline">Book Appointment</span>
+            </Button>
+          </a>
 
           <ThemeToggle />
 
@@ -88,6 +107,25 @@ export function Header() {
                   <Button className="w-full gap-2">
                     <Phone className="h-4 w-4" />
                     Call Now: {COMPANY_INFO.phone}
+                  </Button>
+                </a>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsOpen(false);
+                    const isHomePage = window.location.pathname === '/';
+                    if (isHomePage) {
+                      setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300);
+                    } else {
+                      window.location.href = '/#contact';
+                    }
+                  }}
+                  data-testid="link-book-mobile"
+                >
+                  <Button variant="outline" className="w-full gap-2">
+                    <CalendarCheck className="h-4 w-4" />
+                    Book an Appointment
                   </Button>
                 </a>
               </nav>
