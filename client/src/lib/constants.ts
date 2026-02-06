@@ -194,14 +194,13 @@ export const FAQ_DATA = [
 ];
 
 export const BRANDS = [
-  "LG",
   "Samsung",
-  "Whirlpool",
-  "Bosch",
-  "IFB",
-  "Haier",
-  "Siemens",
-  "Panasonic",
   "Godrej",
-  "Electrolux",
+  "Haier",
+  "LG",
+  "Videocon",
+  "Whirlpool",
+  "IFB",
+  "Xiaomi",
+  "Sony",
 ];
