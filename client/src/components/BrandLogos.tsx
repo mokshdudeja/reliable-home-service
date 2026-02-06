@@ -8,16 +8,16 @@ import {
 } from "react-icons/si";
 
 const BRAND_DATA = [
-  { name: "LG", icon: SiLg },
-  { name: "Samsung", icon: SiSamsung },
-  { name: "Whirlpool", icon: null },
-  { name: "Bosch", icon: SiBosch },
-  { name: "IFB", icon: null },
-  { name: "Haier", icon: null },
-  { name: "Siemens", icon: SiSiemens },
-  { name: "Panasonic", icon: SiPanasonic },
-  { name: "Godrej", icon: null },
-  { name: "Electrolux", icon: null },
+  { name: "LG", icon: SiLg, color: "#A50034" },
+  { name: "Samsung", icon: SiSamsung, color: "#1428A0" },
+  { name: "Whirlpool", icon: null, color: "#1A7AC4" },
+  { name: "Bosch", icon: SiBosch, color: "#E60004" },
+  { name: "IFB", icon: null, color: "#E31E24" },
+  { name: "Haier", icon: null, color: "#00A0E3" },
+  { name: "Siemens", icon: SiSiemens, color: "#009999" },
+  { name: "Panasonic", icon: SiPanasonic, color: "#0F58A8" },
+  { name: "Godrej", icon: null, color: "#5C2D91" },
+  { name: "Electrolux", icon: null, color: "#041E42" },
 ];
 
 export function BrandLogos() {
@@ -39,9 +39,9 @@ export function BrandLogos() {
               data-testid={`brand-${brand.name.toLowerCase()}`}
             >
               {brand.icon ? (
-                <brand.icon className="w-8 h-8 text-muted-foreground" />
+                <brand.icon className="w-10 h-10" style={{ color: brand.color }} />
               ) : (
-                <span className="text-lg font-bold text-muted-foreground">{brand.name}</span>
+                <span className="text-xl font-bold" style={{ color: brand.color }}>{brand.name}</span>
               )}
               <span className="text-xs text-muted-foreground font-medium">{brand.name}</span>
             </div>
