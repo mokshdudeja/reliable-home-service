@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Phone, MessageCircle, Clock, Shield, Wrench } from "lucide-react";
+import { Phone, Clock, Shield, Wrench } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 
 export function Hero() {
@@ -37,17 +37,6 @@ export function Hero() {
                 <Button size="lg" className="gap-2 text-base">
                   <Phone className="h-5 w-5" />
                   Book an Appointment
-                </Button>
-              </a>
-              <a
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi, I need home appliance repair service in Gurugram.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="link-hero-whatsapp"
-              >
-                <Button size="lg" variant="outline" className="gap-2 text-base">
-                  <MessageCircle className="h-5 w-5" />
-                  WhatsApp Us
                 </Button>
               </a>
             </div>

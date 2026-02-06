@@ -1,7 +1,6 @@
 export const COMPANY_INFO = {
   name: "Reliable Home Service",
   phone: "+91 97111 07248",
-  whatsapp: "919711107248",
   email: "info@reliablehomeservice.in",
   address: "Gurugram, Haryana, India",
   workingHours: "9:00 AM - 8:00 PM",

@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Phone, 
-  MessageCircle, 
   CheckCircle, 
   Clock, 
   Shield, 
@@ -93,17 +92,6 @@ export default function ServiceDetail() {
                       <Button size="lg" className="gap-2 text-base">
                         <Phone className="h-5 w-5" />
                         Book an Appointment
-                      </Button>
-                    </a>
-                    <a
-                      href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi, I need ${service.shortName} repair service in Gurugram.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-testid="link-service-whatsapp"
-                    >
-                      <Button size="lg" variant="outline" className="gap-2 text-base">
-                        <MessageCircle className="h-5 w-5" />
-                        WhatsApp Us
                       </Button>
                     </a>
                   </div>

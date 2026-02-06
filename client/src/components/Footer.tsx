@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 
 export function Footer() {
@@ -43,16 +43,6 @@ export function Footer() {
                 data-testid="link-footer-call"
               >
                 <Phone className="w-5 h-5" />
-              </a>
-              <a
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-green-600 transition-colors"
-                aria-label="WhatsApp us"
-                data-testid="link-footer-whatsapp"
-              >
-                <MessageCircle className="w-5 h-5" />
               </a>
               <a
                 href={`mailto:${COMPANY_INFO.email}`}

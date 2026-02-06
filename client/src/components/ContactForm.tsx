@@ -24,7 +24,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Phone, MessageCircle, Clock, MapPin, Loader2, CheckCircle } from "lucide-react";
+import { Phone, Clock, MapPin, Loader2, CheckCircle } from "lucide-react";
 import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -143,21 +143,6 @@ export function ContactForm() {
                 </div>
               </a>
 
-              <a
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi, I need home appliance repair service in Gurugram.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-lg bg-green-600 text-white hover-elevate overflow-visible"
-                data-testid="link-contact-whatsapp"
-              >
-                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">WhatsApp Us</p>
-                  <p className="opacity-90">Quick Response</p>
-                </div>
-              </a>
 
               <div className="grid gap-4 pt-4">
                 <div className="flex items-start gap-3">

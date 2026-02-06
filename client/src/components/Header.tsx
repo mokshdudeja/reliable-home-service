@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import { Phone, Menu, MessageCircle } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -50,19 +50,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi, I need home appliance repair service in Gurugram.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex"
-            data-testid="link-whatsapp-header"
-          >
-            <Button variant="outline" size="sm" className="gap-2">
-              <MessageCircle className="h-4 w-4" />
-              <span className="hidden md:inline">WhatsApp</span>
-            </Button>
-          </a>
-
           <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-call-header">
             <Button size="sm" className="gap-2">
               <Phone className="h-4 w-4" />
@@ -101,17 +88,6 @@ export function Header() {
                   <Button className="w-full gap-2">
                     <Phone className="h-4 w-4" />
                     Call Now: {COMPANY_INFO.phone}
-                  </Button>
-                </a>
-                <a
-                  href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi, I need home appliance repair service in Gurugram.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid="link-whatsapp-mobile"
-                >
-                  <Button variant="outline" className="w-full gap-2">
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp Us
                   </Button>
                 </a>
               </nav>
