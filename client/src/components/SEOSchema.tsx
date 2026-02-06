@@ -69,11 +69,8 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
     },
     "offers": {
       "@type": "Offer",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "priceCurrency": "INR",
-        "price": s.startingPrice.replace("₹", ""),
-      },
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR",
     },
   }));
 
@@ -155,9 +152,8 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
         },
         "offers": {
           "@type": "Offer",
+          "availability": "https://schema.org/InStock",
           "priceCurrency": "INR",
-          "price": service.startingPrice.replace("₹", ""),
-          "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
         },
       }
     : null;

@@ -15,7 +15,6 @@ import {
   CheckCircle, 
   Clock, 
   Shield, 
-  IndianRupee,
   ArrowLeft,
   Wrench
 } from "lucide-react";
@@ -31,7 +30,7 @@ export default function ServiceDetail() {
       ? `${service.name} in Gurugram - Same Day Doorstep Service | ${COMPANY_INFO.name}`
       : `Service Not Found | ${COMPANY_INFO.name}`,
     description: service 
-      ? `${service.description} Same-day doorstep service in Gurugram. Starting from ${service.startingPrice}. Call now for expert ${service.shortName.toLowerCase()} repair!`
+      ? `${service.description} Same-day doorstep service in Gurugram. Call now to book an appointment for expert ${service.shortName.toLowerCase()} repair!`
       : "Service not found",
     canonical: service ? `/services/${service.id}` : undefined,
     ogImage: service?.image,
@@ -77,10 +76,6 @@ export default function ServiceDetail() {
                       <Clock className="w-3 h-3 mr-1" />
                       Same Day Service
                     </Badge>
-                    <Badge variant="secondary" className="text-sm py-1 px-3">
-                      <IndianRupee className="w-3 h-3 mr-1" />
-                      Starting {service.startingPrice}
-                    </Badge>
                   </div>
 
                   <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
@@ -97,7 +92,7 @@ export default function ServiceDetail() {
                     <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-service-call">
                       <Button size="lg" className="gap-2 text-base">
                         <Phone className="h-5 w-5" />
-                        Call Now
+                        Book an Appointment
                       </Button>
                     </a>
                     <a
@@ -200,11 +195,11 @@ export default function ServiceDetail() {
                 <Card className="hover-elevate overflow-visible">
                   <CardContent className="p-6 text-center space-y-3">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                      <IndianRupee className="w-6 h-6 text-primary" />
+                      <CheckCircle className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="font-heading font-semibold">Affordable Pricing</h3>
+                    <h3 className="font-heading font-semibold">Transparent Pricing</h3>
                     <p className="text-sm text-muted-foreground">
-                      Starting from just {service.startingPrice}
+                      No hidden charges, upfront quotes
                     </p>
                   </CardContent>
                 </Card>

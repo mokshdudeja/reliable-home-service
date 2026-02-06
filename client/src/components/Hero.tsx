@@ -36,7 +36,7 @@ export function Hero() {
               <a href={`tel:${COMPANY_INFO.phone}`} data-testid="link-hero-call">
                 <Button size="lg" className="gap-2 text-base">
                   <Phone className="h-5 w-5" />
-                  Call Now
+                  Book an Appointment
                 </Button>
               </a>
               <a

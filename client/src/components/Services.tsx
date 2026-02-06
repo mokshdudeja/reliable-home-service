@@ -1,9 +1,8 @@
-import { Link } from "wouter";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, IndianRupee } from "lucide-react";
-import { SERVICES } from "@/lib/constants";
+import { Phone } from "lucide-react";
+import { SERVICES, COMPANY_INFO } from "@/lib/constants";
 
 export function Services() {
   return (
@@ -16,7 +15,7 @@ export function Services() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Expert doorstep repair for all major home appliances in Gurugram. 
-            Same-day service with transparent pricing.
+            Book an appointment for same-day doorstep service.
           </p>
         </div>
 
@@ -37,15 +36,9 @@ export function Services() {
                 </div>
               </CardHeader>
               <CardContent className="flex-1 p-5 space-y-3">
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="font-heading font-semibold text-lg">
-                    {service.shortName}
-                  </h3>
-                  <Badge variant="outline" className="shrink-0">
-                    <IndianRupee className="w-3 h-3" />
-                    From {service.startingPrice.replace("₹", "")}
-                  </Badge>
-                </div>
+                <h3 className="font-heading font-semibold text-lg">
+                  {service.shortName}
+                </h3>
                 <p className="text-muted-foreground text-sm line-clamp-2">
                   {service.description}
                 </p>
@@ -63,16 +56,15 @@ export function Services() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0">
-                <Link href={`/services/${service.id}`} className="w-full">
+                <a href={`tel:${COMPANY_INFO.phone}`} className="w-full">
                   <Button
-                    variant="outline"
                     className="w-full gap-2"
                     data-testid={`button-service-${service.id}`}
                   >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
+                    <Phone className="w-4 h-4" />
+                    Book an Appointment
                   </Button>
-                </Link>
+                </a>
               </CardFooter>
             </Card>
           ))}

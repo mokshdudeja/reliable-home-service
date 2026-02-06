@@ -18,7 +18,6 @@ export const SERVICES = [
     shortName: "Washing Machine",
     description: "Complete washing machine repair for top-load, front-load, and fully automatic models.",
     image: "/images/service-washing-machine.png",
-    startingPrice: "₹249",
     commonIssues: [
       "Machine not spinning",
       "Water not draining",
@@ -35,7 +34,6 @@ export const SERVICES = [
     shortName: "Refrigerator",
     description: "Fast and reliable fridge repair for single-door, double-door, and side-by-side models.",
     image: "/images/service-refrigerator.png",
-    startingPrice: "₹299",
     commonIssues: [
       "Fridge not cooling",
       "Freezer not working",
@@ -52,7 +50,6 @@ export const SERVICES = [
     shortName: "Microwave",
     description: "Expert microwave oven repair. Fix heating, turntable, and control panel issues.",
     image: "/images/service-microwave.png",
-    startingPrice: "₹199",
     commonIssues: [
       "Not heating food",
       "Turntable not rotating",
@@ -69,7 +66,6 @@ export const SERVICES = [
     shortName: "Dryer",
     description: "Professional clothes dryer repair services. Fix heating, tumbling, and venting issues quickly.",
     image: "/images/service-dryer.png",
-    startingPrice: "₹299",
     commonIssues: [
       "Dryer not heating",
       "Drum not spinning",
@@ -86,7 +82,6 @@ export const SERVICES = [
     shortName: "Dishwasher",
     description: "Expert dishwasher repair for all brands. Fix cleaning, drainage, and cycle issues.",
     image: "/images/service-dishwasher.png",
-    startingPrice: "₹349",
     commonIssues: [
       "Dishes not cleaning properly",
       "Water not draining",
@@ -191,7 +186,7 @@ export const FAQ_DATA = [
   },
   {
     question: "What are your service charges?",
-    answer: "Our visiting charges start from ₹199. The final cost depends on the repair needed. We always provide a transparent quote before starting the work.",
+    answer: "We provide transparent and competitive pricing. The cost depends on the type of repair needed. We always provide an upfront quote before starting any work - no hidden charges.",
   },
   {
     question: "Do you use genuine spare parts?",
