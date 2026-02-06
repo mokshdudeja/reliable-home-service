@@ -28,7 +28,7 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
       "longitude": "77.0266",
     },
     "url": "https://reliablehomeservice.in",
-    "priceRange": "₹₹",
+    "priceRange": "$$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
