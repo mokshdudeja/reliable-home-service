@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Phone, CalendarCheck, Clock, Shield, Wrench } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
+import { useBookingDialog } from "@/components/BookingDialog";
 
 export function Hero() {
+  const { setOpen } = useBookingDialog();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -39,19 +42,16 @@ export function Hero() {
                   Call Now
                 </Button>
               </a>
-              <a
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                data-testid="link-hero-book"
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2 text-base"
+                onClick={() => setOpen(true)}
+                data-testid="button-hero-book"
               >
-                <Button size="lg" variant="outline" className="gap-2 text-base">
-                  <CalendarCheck className="h-5 w-5" />
-                  Book an Appointment
-                </Button>
-              </a>
+                <CalendarCheck className="h-5 w-5" />
+                Book an Appointment
+              </Button>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 pt-4 text-sm text-muted-foreground">

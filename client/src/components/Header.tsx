@@ -5,10 +5,12 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Phone, Menu, CalendarCheck } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { useBookingDialog } from "@/components/BookingDialog";
 
 export function Header() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { setOpen: setBookingOpen } = useBookingDialog();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -56,25 +58,16 @@ export function Header() {
               <span className="hidden md:inline">Call Now</span>
             </Button>
           </a>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const isHomePage = window.location.pathname === '/';
-              if (isHomePage) {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.location.href = '/#contact';
-              }
-            }}
-            className="hidden sm:inline-flex"
-            data-testid="link-book-header"
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-2 hidden sm:inline-flex"
+            onClick={() => setBookingOpen(true)}
+            data-testid="button-book-header"
           >
-            <Button variant="outline" size="sm" className="gap-2">
-              <CalendarCheck className="h-4 w-4" />
-              <span className="hidden md:inline">Book Appointment</span>
-            </Button>
-          </a>
+            <CalendarCheck className="h-4 w-4" />
+            <span className="hidden md:inline">Book Appointment</span>
+          </Button>
 
           <ThemeToggle />
 
@@ -109,25 +102,18 @@ export function Header() {
                     Call Now: {COMPANY_INFO.phone}
                   </Button>
                 </a>
-                <a
-                  href="#contact"
-                  onClick={(e) => {
-                    e.preventDefault();
+                <Button
+                  variant="outline"
+                  className="w-full gap-2"
+                  onClick={() => {
                     setIsOpen(false);
-                    const isHomePage = window.location.pathname === '/';
-                    if (isHomePage) {
-                      setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300);
-                    } else {
-                      window.location.href = '/#contact';
-                    }
+                    setTimeout(() => setBookingOpen(true), 300);
                   }}
-                  data-testid="link-book-mobile"
+                  data-testid="button-book-mobile"
                 >
-                  <Button variant="outline" className="w-full gap-2">
-                    <CalendarCheck className="h-4 w-4" />
-                    Book an Appointment
-                  </Button>
-                </a>
+                  <CalendarCheck className="h-4 w-4" />
+                  Book an Appointment
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>

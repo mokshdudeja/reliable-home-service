@@ -3,8 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CalendarCheck } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
+import { useBookingDialog } from "@/components/BookingDialog";
 
 export function Services() {
+  const { setOpen } = useBookingDialog();
+
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-background" id="services">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
@@ -56,22 +59,14 @@ export function Services() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0">
-                <a
-                  href="#contact"
-                  className="w-full"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                <Button
+                  className="w-full gap-2"
+                  onClick={() => setOpen(true)}
+                  data-testid={`button-service-${service.id}`}
                 >
-                  <Button
-                    className="w-full gap-2"
-                    data-testid={`button-service-${service.id}`}
-                  >
-                    <CalendarCheck className="w-4 h-4" />
-                    Book an Appointment
-                  </Button>
-                </a>
+                  <CalendarCheck className="w-4 h-4" />
+                  Book an Appointment
+                </Button>
               </CardFooter>
             </Card>
           ))}

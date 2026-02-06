@@ -19,9 +19,11 @@ import {
   Wrench
 } from "lucide-react";
 import { SERVICES, COMPANY_INFO } from "@/lib/constants";
+import { useBookingDialog } from "@/components/BookingDialog";
 
 export default function ServiceDetail() {
   const [match, params] = useRoute("/services/:serviceId");
+  const { setOpen: setBookingOpen } = useBookingDialog();
   
   const service = match && params ? SERVICES.find((s) => s.id === params.serviceId) : null;
 
@@ -95,19 +97,16 @@ export default function ServiceDetail() {
                         Call Now
                       </Button>
                     </a>
-                    <a
-                      href="#contact"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      data-testid="link-service-book"
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="gap-2 text-base"
+                      onClick={() => setBookingOpen(true)}
+                      data-testid="button-service-book"
                     >
-                      <Button size="lg" variant="outline" className="gap-2 text-base">
-                        <CalendarCheck className="h-5 w-5" />
-                        Book an Appointment
-                      </Button>
-                    </a>
+                      <CalendarCheck className="h-5 w-5" />
+                      Book an Appointment
+                    </Button>
                   </div>
                 </div>
 
