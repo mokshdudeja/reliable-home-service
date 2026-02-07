@@ -9,7 +9,7 @@ export function Services() {
   const { setOpen } = useBookingDialog();
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background" id="services">
+    <section className="py-16 md:py-20 lg:py-24 bg-background" id="services" aria-label="Our appliance repair services">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="secondary" className="mb-4">Our Services</Badge>

@@ -57,7 +57,7 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="why-us">
+    <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="why-us" aria-label="Why choose Reliable Home Service">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="secondary" className="mb-4">Why Choose Us</Badge>

@@ -4,7 +4,7 @@ import { SERVICE_AREAS } from "@/lib/constants";
 
 export function ServiceAreas() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background" id="areas">
+    <section className="py-16 md:py-20 lg:py-24 bg-background" id="areas" aria-label="Service areas in Gurugram">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <Badge variant="secondary" className="mb-4">

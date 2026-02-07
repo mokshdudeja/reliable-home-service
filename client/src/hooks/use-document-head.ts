@@ -33,12 +33,13 @@ export function useDocumentHead({
     updateMetaTag("og:title", title, true);
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:image", `${baseUrl}${ogImage}`, true);
-    updateMetaTag("twitter:title", title, true);
-    updateMetaTag("twitter:description", description, true);
-    updateMetaTag("twitter:image", `${baseUrl}${ogImage}`, true);
+    updateMetaTag("og:url", canonical ? `${baseUrl}${canonical}` : baseUrl, true);
+    updateMetaTag("twitter:title", title);
+    updateMetaTag("twitter:description", description);
+    updateMetaTag("twitter:image", `${baseUrl}${ogImage}`);
+    updateMetaTag("twitter:image:alt", title);
 
     if (canonical) {
-      updateMetaTag("og:url", `${baseUrl}${canonical}`, true);
       let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
       if (!canonicalLink) {
         canonicalLink = document.createElement("link");

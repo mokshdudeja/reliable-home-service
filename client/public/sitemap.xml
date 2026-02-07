@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://reliablehomeservice.in/</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/hero-technician.webp</image:loc>
+      <image:title>Reliable Home Service - Professional Appliance Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reliablehomeservice.in/services/washing-machine-repair</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/service-washing-machine.webp</image:loc>
+      <image:title>Washing Machine Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reliablehomeservice.in/services/refrigerator-repair</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/service-refrigerator.webp</image:loc>
+      <image:title>Refrigerator Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reliablehomeservice.in/services/microwave-repair</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/service-microwave.webp</image:loc>
+      <image:title>Microwave Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reliablehomeservice.in/services/dryer-repair</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/service-dryer.webp</image:loc>
+      <image:title>Dryer Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reliablehomeservice.in/services/dishwasher-repair</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://reliablehomeservice.in/images/service-dishwasher.webp</image:loc>
+      <image:title>Dishwasher Repair in Gurugram</image:title>
+    </image:image>
+  </url>
+</urlset>

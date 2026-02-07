@@ -114,7 +114,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background" id="contact">
+    <section className="py-16 md:py-20 lg:py-24 bg-background" id="contact" aria-label="Book a repair service">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">

@@ -8,7 +8,7 @@ export function Hero() {
   const { setOpen } = useBookingDialog();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-primary/10" aria-label="Home appliance repair service in Gurugram" role="banner">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-20 lg:py-24">

@@ -9,7 +9,7 @@ import { FAQ_DATA } from "@/lib/constants";
 
 export function FAQ() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="faq">
+    <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="faq" aria-label="Frequently asked questions about appliance repair">
       <div className="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">FAQs</Badge>
