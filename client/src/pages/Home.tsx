@@ -17,8 +17,8 @@ const FloatingCTA = lazy(() => import("@/components/FloatingCTA").then(m => ({ d
 
 export default function Home() {
   useDocumentHead({
-    title: `Washing Machine, Refrigerator, Microwave, Dryer, Dishwasher Repair in Gurugram | ${COMPANY_INFO.name}`,
-    description: "Reliable Home Service - Expert home appliance repair in Gurugram. Same-day doorstep service for Washing Machine, Refrigerator, Microwave, Dryer & Dishwasher. Call now for instant repair!",
+    title: `${COMPANY_INFO.name} | Appliance Repair Gurugram`,
+    description: "Same-day home appliance repair in Gurugram. Expert washing machine, refrigerator, microwave, dryer & dishwasher repair. Call +91 97111 07248",
     canonical: "/",
   });
 

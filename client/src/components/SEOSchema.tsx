@@ -153,8 +153,8 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
     "@type": "WebPage",
     "@id": `${baseUrl}/#webpage`,
     "url": baseUrl,
-    "name": `Reliable Home Service | Washing Machine, Refrigerator, Microwave, Dryer, Dishwasher Repair in Gurugram`,
-    "description": "Expert home appliance repair in Gurugram. Same-day doorstep service for Washing Machine, Refrigerator, Microwave, Dryer & Dishwasher. Call +91 97111 07248",
+    "name": "Reliable Home Service | Appliance Repair Gurugram",
+    "description": "Same-day home appliance repair in Gurugram. Expert washing machine, refrigerator, microwave, dryer & dishwasher repair. Call +91 97111 07248",
     "isPartOf": { "@id": `${baseUrl}/#website` },
     "about": { "@id": `${baseUrl}/#organization` },
     "inLanguage": "en-IN",
@@ -218,11 +218,21 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
     })),
   };
 
+  const averageRating = (TESTIMONIALS.reduce((sum, t) => sum + t.rating, 0) / TESTIMONIALS.length).toFixed(1);
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${baseUrl}/#reviews`,
     "name": COMPANY_INFO.name,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": averageRating,
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": TESTIMONIALS.length.toString(),
+      "reviewCount": TESTIMONIALS.length.toString(),
+    },
     "review": TESTIMONIALS.map((t) => ({
       "@type": "Review",
       "reviewRating": {
