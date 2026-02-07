@@ -11,7 +11,7 @@ export function useDocumentHead({
   title,
   description,
   canonical,
-  ogImage = "/images/hero-technician.png",
+  ogImage = "/images/hero-technician.webp",
 }: DocumentHeadProps) {
   useEffect(() => {
     const baseUrl = "https://reliablehomeservice.in";

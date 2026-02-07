@@ -80,7 +80,9 @@ export function Hero() {
             <div className="absolute -bottom-8 -left-8 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/images/hero-technician.png"
+                src="/images/hero-technician.webp"
+                width={800}
+                height={800}
                 alt="Professional home appliance repair technician in Gurugram"
                 className="w-full h-auto object-cover"
                 loading="eager"

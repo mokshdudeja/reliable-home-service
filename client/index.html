@@ -13,7 +13,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Reliable Home Service - Home Appliance Repair in Gurugram" />
     <meta property="og:description" content="Expert home appliance repair in Gurugram. Same-day doorstep service for Washing Machine, Refrigerator, Microwave, Dryer & Dishwasher." />
-    <meta property="og:image" content="/images/hero-technician.png" />
+    <meta property="og:image" content="/images/hero-technician.webp" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -25,17 +25,27 @@
     <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
     <link rel="canonical" href="https://reliablehomeservice.in/" />
     
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" type="image/webp" href="/images/hero-technician.webp" />
+    
+    <!-- Fonts with display=swap for faster rendering -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17938623489"></script>
+    <!-- Google tag (gtag.js) - defer loading -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17938623489');
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17938623489';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'AW-17938623489');
+      });
     </script>
   </head>
   <body>

@@ -16,7 +16,7 @@ export const SERVICES = [
     name: "Washing Machine Repair",
     shortName: "Washing Machine",
     description: "Complete washing machine repair for top-load, front-load, and fully automatic models.",
-    image: "/images/service-washing-machine.png",
+    image: "/images/service-washing-machine.webp",
     commonIssues: [
       "Machine not spinning",
       "Water not draining",
@@ -32,7 +32,7 @@ export const SERVICES = [
     name: "Refrigerator Repair & Service",
     shortName: "Refrigerator",
     description: "Fast and reliable fridge repair for single-door, double-door, and side-by-side models.",
-    image: "/images/service-refrigerator.png",
+    image: "/images/service-refrigerator.webp",
     commonIssues: [
       "Fridge not cooling",
       "Freezer not working",
@@ -48,7 +48,7 @@ export const SERVICES = [
     name: "Microwave Repair & Service",
     shortName: "Microwave",
     description: "Expert microwave oven repair. Fix heating, turntable, and control panel issues.",
-    image: "/images/service-microwave.png",
+    image: "/images/service-microwave.webp",
     commonIssues: [
       "Not heating food",
       "Turntable not rotating",
@@ -64,7 +64,7 @@ export const SERVICES = [
     name: "Dryer Repair & Service",
     shortName: "Dryer",
     description: "Professional clothes dryer repair services. Fix heating, tumbling, and venting issues quickly.",
-    image: "/images/service-dryer.png",
+    image: "/images/service-dryer.webp",
     commonIssues: [
       "Dryer not heating",
       "Drum not spinning",
@@ -80,7 +80,7 @@ export const SERVICES = [
     name: "Dishwasher Repair & Service",
     shortName: "Dishwasher",
     description: "Expert dishwasher repair for all brands. Fix cleaning, drainage, and cycle issues.",
-    image: "/images/service-dishwasher.png",
+    image: "/images/service-dishwasher.webp",
     commonIssues: [
       "Dishes not cleaning properly",
       "Water not draining",

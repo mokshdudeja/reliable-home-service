@@ -13,7 +13,7 @@ export function SEOSchema({ type, serviceId }: SEOSchemaProps) {
     "@type": "LocalBusiness",
     "@id": "https://reliablehomeservice.in/#business",
     "name": COMPANY_INFO.name,
-    "image": "https://reliablehomeservice.in/images/hero-technician.png",
+    "image": "https://reliablehomeservice.in/images/hero-technician.webp",
     "telephone": COMPANY_INFO.phone,
     "email": COMPANY_INFO.email,
     "address": {

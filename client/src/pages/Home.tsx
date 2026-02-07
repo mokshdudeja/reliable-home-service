@@ -1,17 +1,19 @@
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { BrandLogos } from "@/components/BrandLogos";
-import { Testimonials } from "@/components/Testimonials";
-import { FAQ } from "@/components/FAQ";
-import { ServiceAreas } from "@/components/ServiceAreas";
-import { ContactForm } from "@/components/ContactForm";
-import { Footer } from "@/components/Footer";
-import { FloatingCTA } from "@/components/FloatingCTA";
 import { SEOSchema } from "@/components/SEOSchema";
 import { useDocumentHead } from "@/hooks/use-document-head";
 import { COMPANY_INFO } from "@/lib/constants";
+
+const WhyChooseUs = lazy(() => import("@/components/WhyChooseUs").then(m => ({ default: m.WhyChooseUs })));
+const BrandLogos = lazy(() => import("@/components/BrandLogos").then(m => ({ default: m.BrandLogos })));
+const Testimonials = lazy(() => import("@/components/Testimonials").then(m => ({ default: m.Testimonials })));
+const FAQ = lazy(() => import("@/components/FAQ").then(m => ({ default: m.FAQ })));
+const ServiceAreas = lazy(() => import("@/components/ServiceAreas").then(m => ({ default: m.ServiceAreas })));
+const ContactForm = lazy(() => import("@/components/ContactForm").then(m => ({ default: m.ContactForm })));
+const Footer = lazy(() => import("@/components/Footer").then(m => ({ default: m.Footer })));
+const FloatingCTA = lazy(() => import("@/components/FloatingCTA").then(m => ({ default: m.FloatingCTA })));
 
 export default function Home() {
   useDocumentHead({
@@ -28,15 +30,19 @@ export default function Home() {
         <main className="flex-1">
           <Hero />
           <Services />
-          <WhyChooseUs />
-          <BrandLogos />
-          <Testimonials />
-          <FAQ />
-          <ServiceAreas />
-          <ContactForm />
+          <Suspense fallback={null}>
+            <WhyChooseUs />
+            <BrandLogos />
+            <Testimonials />
+            <FAQ />
+            <ServiceAreas />
+            <ContactForm />
+          </Suspense>
         </main>
-        <Footer />
-        <FloatingCTA />
+        <Suspense fallback={null}>
+          <Footer />
+          <FloatingCTA />
+        </Suspense>
       </div>
     </>
   );
